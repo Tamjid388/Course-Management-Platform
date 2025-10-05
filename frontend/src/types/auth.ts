@@ -3,8 +3,9 @@ export type TRegister={
   email: string;
   password: string;
 }
-export type TLogin={
-  username: string;
+export type TSignin={
+ 
   email: string;
+    password: string;
 
 }

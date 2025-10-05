@@ -1,8 +1,11 @@
+import { useSignIn } from '@/hooks/useSignIn';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import Swal from 'sweetalert2';
 type Inputs = {
-  name: string;
+  
   email: string;
   password: string;
 }
@@ -14,9 +17,21 @@ export default function LoginForm() {
       watch,
       formState: { errors },
     } = useForm<Inputs>()
+ const router=useRouter()
+    const  signInMutation =useSignIn()
   
       const onSubmit: SubmitHandler<Inputs> = (data) => {
       console.log("Form Data:", data);
+      signInMutation.mutate(data,{
+           onSuccess: (res) => {
+      console.log("JWT:", res.jwt); 
+      localStorage.setItem("token", res.jwt); 
+      router.push("/"); 
+    },
+    onError: (err) => {
+      Swal.fire("Login Failed", "Check your credentials", "error");
+    },
+      })
     };
   return (
     <div className=' h-screen flex items-center justify-center'>
