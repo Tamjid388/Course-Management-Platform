@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "title": "Full Stack Web Development",
+    "description": "Learn to build modern web applications using React, Node.js, and MongoDB.",
+    "thumbnail": "/images/fullstack.jpg",
+    "instructor": "John Doe",
+    "category": "Web Development",
+    "level": "Intermediate",
+    "price": 49,
+    "modules": [
+      {
+        "title": "Frontend Basics",
+        "description": "HTML, CSS, and Tailwind CSS fundamentals.",
+        "videos": [
+          {
+            "title": "Introduction to Web Development",
+            "duration": "08:32",
+            "videoUrl": "https://www.youtube.com/watch?v=example1"
+          },
+          {
+            "title": "HTML & CSS Essentials",
+            "duration": "12:15",
+            "videoUrl": "https://www.youtube.com/watch?v=example2"
+          },
+          {
+            "title": "Responsive Design with Tailwind",
+            "duration": "10:40",
+            "videoUrl": "https://www.youtube.com/watch?v=example3"
+          }
+        ]
+      },
+      {
+        "title": "React Fundamentals",
+        "description": "Learn component-based development with React.",
+        "videos": [
+          {
+            "title": "React Basics & Components",
+            "duration": "09:50",
+            "videoUrl": "https://www.youtube.com/watch?v=example4"
+          },
+          {
+            "title": "Props and State Management",
+            "duration": "14:22",
+            "videoUrl": "https://www.youtube.com/watch?v=example5"
+          }
+        ]
+      },
+      {
+        "title": "Backend with Node.js",
+        "description": "Understand REST APIs and database integration.",
+        "videos": [
+          {
+            "title": "Setting up Express Server",
+            "duration": "07:45",
+            "videoUrl": "https://www.youtube.com/watch?v=example6"
+          },
+          {
+            "title": "MongoDB CRUD Operations",
+            "duration": "11:33",
+            "videoUrl": "https://www.youtube.com/watch?v=example7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Fundamentals",
+    "description": "Master user interface and user experience design using Figma.",
+    "thumbnail": "/images/uiux.jpg",
+    "instructor": "Jane Smith",
+    "category": "Design",
+    "level": "Beginner",
+    "price": 29,
+    "modules": [
+      {
+        "title": "Introduction to Design",
+        "description": "Understanding UI and UX principles.",
+        "videos": [
+          {
+            "title": "What is UI/UX?",
+            "duration": "06:10",
+            "videoUrl": "https://www.youtube.com/watch?v=example8"
+          },
+          {
+            "title": "Design Thinking Process",
+            "duration": "09:40",
+            "videoUrl": "https://www.youtube.com/watch?v=example9"
+          }
+        ]
+      },
+      {
+        "title": "Figma Basics",
+        "description": "Learn wireframing and prototyping.",
+        "videos": [
+          {
+            "title": "Figma Interface Overview",
+            "duration": "10:05",
+            "videoUrl": "https://www.youtube.com/watch?v=example10"
+          },
+          {
+            "title": "Building Wireframes",
+            "duration": "12:50",
+            "videoUrl": "https://www.youtube.com/watch?v=example11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "JavaScript for Beginners",
+    "description": "Start your programming journey with JavaScript basics and hands-on examples.",
+    "thumbnail": "/images/javascript.jpg",
+    "instructor": "Michael Lee",
+    "category": "Programming",
+    "level": "Beginner",
+    "price": 0,
+    "modules": [
+      {
+        "title": "JavaScript Basics",
+        "description": "Learn variables, data types, and operators.",
+        "videos": [
+          {
+            "title": "Intro to JavaScript",
+            "duration": "07:10",
+            "videoUrl": "https://www.youtube.com/watch?v=example12"
+          },
+          {
+            "title": "Variables & Data Types",
+            "duration": "09:22",
+            "videoUrl": "https://www.youtube.com/watch?v=example13"
+          }
+        ]
+      },
+      {
+        "title": "Functions & Arrays",
+        "description": "Understanding core programming concepts.",
+        "videos": [
+          {
+            "title": "Functions Explained",
+            "duration": "08:05",
+            "videoUrl": "https://www.youtube.com/watch?v=example14"
+          },
+          {
+            "title": "Working with Arrays",
+            "duration": "11:00",
+            "videoUrl": "https://www.youtube.com/watch?v=example15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "description": "Explore data analysis, visualization, and machine learning using Python.",
+    "thumbnail": "/images/python.jpg",
+    "instructor": "Emily Carter",
+    "category": "Data Science",
+    "level": "Intermediate",
+    "price": 59,
+    "modules": [
+      {
+        "title": "Python Essentials",
+        "description": "Learn Python syntax, data types, and libraries for data analysis.",
+        "videos": [
+          {
+            "title": "Getting Started with Python",
+            "duration": "10:15",
+            "videoUrl": "https://www.youtube.com/watch?v=example16"
+          },
+          {
+            "title": "Working with Lists and Dictionaries",
+            "duration": "12:30",
+            "videoUrl": "https://www.youtube.com/watch?v=example17"
+          }
+        ]
+      },
+      {
+        "title": "Data Analysis with Pandas",
+        "description": "Manipulate and analyze data using Pandas library.",
+        "videos": [
+          {
+            "title": "Introduction to Pandas",
+            "duration": "09:55",
+            "videoUrl": "https://www.youtube.com/watch?v=example18"
+          },
+          {
+            "title": "Data Cleaning Techniques",
+            "duration": "11:20",
+            "videoUrl": "https://www.youtube.com/watch?v=example19"
+          }
+        ]
+      },
+      {
+        "title": "Data Visualization",
+        "description": "Visualize datasets using Matplotlib and Seaborn.",
+        "videos": [
+          {
+            "title": "Plotting with Matplotlib",
+            "duration": "08:40",
+            "videoUrl": "https://www.youtube.com/watch?v=example20"
+          },
+          {
+            "title": "Advanced Visualization with Seaborn",
+            "duration": "10:05",
+            "videoUrl": "https://www.youtube.com/watch?v=example21"
+          }
+        ]
+      },
+      {
+        "title": "Introduction to Machine Learning",
+        "description": "Build your first ML model using Scikit-learn.",
+        "videos": [
+          {
+            "title": "Understanding ML Concepts",
+            "duration": "09:15",
+            "videoUrl": "https://www.youtube.com/watch?v=example22"
+          },
+          {
+            "title": "Linear Regression in Python",
+            "duration": "13:10",
+            "videoUrl": "https://www.youtube.com/watch?v=example23"
+          }
+        ]
+      }
+    ]
+  }
+]
