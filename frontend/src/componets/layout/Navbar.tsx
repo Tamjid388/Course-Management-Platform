@@ -1,7 +1,12 @@
+
+"use client"
+import { useCurrentUser } from "@/hooks/useCurrenuser";
 import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
+  const {data:user}=useCurrentUser()
+  console.log(user);
   return (
     <div className="navbar bg-white text-black shadow-sm fixed">
       <div className="navbar-start">
