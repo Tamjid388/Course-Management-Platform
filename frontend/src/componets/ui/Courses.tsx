@@ -1,12 +1,22 @@
 "use client"
 
 import { useCourses } from "@/hooks/useCourses";
+import { useCurrentUser } from "@/hooks/useCurrenuser";
 import { Course, Module } from "@/types/course";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 export default function Courses() {
       const {data:allcourse}=useCourses()
-  console.log(allcourse);
+      const { data: user } = useCurrentUser();
+  const router = useRouter();
+  const handleViewMore = (id: string) => {
+    if (!user) {
+      router.push("/login");
+      return;
+    }
+    router.push(`/courses/${id}`);
+  };
 
   return (
       <div className="py-16 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
@@ -41,11 +51,12 @@ export default function Courses() {
           
             {/* Modules */}
             <div>
-              <Link
-              href={`/courses/${course.documentId}`}
-              className="btn btn-neutral">
+            <button
+                onClick={() => handleViewMore(course.documentId)}
+                className="btn btn-neutral w-full"
+              >
                 View More
-              </Link>
+              </button>
            
             </div>
           </div>

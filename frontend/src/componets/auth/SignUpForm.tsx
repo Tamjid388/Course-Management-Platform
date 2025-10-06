@@ -21,7 +21,7 @@ const {mutate,isPending}=useRegister()
    mutate(data)
   };
   return (
-    <div className=' h-screen flex items-center justify-center'>
+    <div className=' h-screen flex items-center justify-center py-12 px-2'>
        <form onSubmit={handleSubmit(onSubmit)}
          className='border border-gray-300
           rounded-2xl p-8 w-full max-w-lg space-y-4 

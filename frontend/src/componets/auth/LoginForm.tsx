@@ -34,7 +34,7 @@ export default function LoginForm() {
       })
     };
   return (
-    <div className=' h-screen flex items-center justify-center'>
+    <div className='px-2 h-screen flex items-center justify-center'>
        <form onSubmit={handleSubmit(onSubmit)}
          className='border border-gray-300
           rounded-2xl p-8 w-full max-w-lg space-y-4 

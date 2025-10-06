@@ -20,6 +20,12 @@ export default function Navbar() {
       <li>
         <Link href={"/courses"}>Courses</Link>
       </li>
+
+      {
+        !user &&  <li>
+        <Link href={"/register"}>Register</Link>
+      </li>
+      }
     </>
   );
   return (
