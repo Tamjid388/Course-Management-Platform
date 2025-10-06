@@ -9,21 +9,35 @@ export default function Courses() {
   console.log(allcourse);
 
   return (
-      <div className="py-8 max-w-7xl mx-auto">
-      <h1 className="text-5xl font-bold mb-8">Our Courses</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="py-16 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <div className="text-center mb-10 space-y-3">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+          Our <span className="text-purple-600">Courses</span>
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-gray-600">
+          Explore courses crafted to elevate your skills and career growth
+        </p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {allcourse?.data.map((course: Course) => (
           <div
             key={course.id}
-            className="border rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+            className="border border-gray-200 rounded-2xl shadow-md hover:shadow-lg hover:border-purple-400 transition-all duration-300 bg-white p-6 flex flex-col justify-between"
           >
-            <h2 className="text-2xl font-semibold mb-2 text-purple-600">{course.title}</h2>
-            <p className="text-gray-600 mb-2">
-              Instructor: {course.instructor}
+            <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-purple-600 line-clamp-2">{course.title}</h2>
+            <p className="text-gray-600 text-sm sm:text-base mb-1">
+              <span className="font-semibold">Instructor:</span> {course.instructor}
             </p>
-            <p className="text-gray-600 mb-2">Category: {course.category}</p>
-            <p className="text-gray-600 mb-2">Level: {course.level}</p>
-            <h3 className="text-gray-600 mb-2">{course.module.length} Module</h3>
+<p className="text-gray-600 text-sm sm:text-base mb-1">
+                  <span className="font-semibold">Category:</span> {course.category}
+                </p>
+                <p className="text-gray-600 text-sm sm:text-base mb-1">
+                  <span className="font-semibold">Level:</span> {course.level}
+                </p>
+                <p className="text-gray-600 text-sm sm:text-base mb-4">
+                  <span className="font-semibold">Modules:</span>{" "}
+                  {course.module.length}
+                </p>
           
             {/* Modules */}
             <div>

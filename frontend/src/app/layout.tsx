@@ -30,12 +30,10 @@ export default function RootLayout({
         className={`${geistSans.variable}
      `}
       >
-<QueryProvider>
-
-  <Navbar/>
-        {children}
-</QueryProvider>
-      
+        <QueryProvider>
+          <Navbar />
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );

@@ -55,3 +55,15 @@ export type CoursesResponse = {
     };
   };
 };
+
+export type RichTextChild = {
+  type: string;
+  text?: string;
+  url?: string;
+  children?: RichTextChild[];
+};
+
+export type RichTextBlock = {
+  type: string;
+  children: RichTextChild[];
+};

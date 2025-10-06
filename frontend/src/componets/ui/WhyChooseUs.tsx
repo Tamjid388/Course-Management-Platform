@@ -35,20 +35,23 @@ export default function WhyChooseUs() {
         },
     ]
   return (
-    <div className='py-16 flex flex-col max-w-7xl mx-auto'>
-   <div className='flex flex-col items-center space-y-3'>
-         <h1 className='text-5xl font-bold'>
-            Why Choose LearnHub?
+    <div className='pt-16 flex flex-col px-4 sm:px-6 lg:px-12  max-w-7xl mx-auto'>
+
+   <div className="text-center mb-10 space-y-3">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+          Why Choose <span className="text-purple-600">LearnHub?</span>
         </h1>
-        <p className='text-xl'>Everything you need to accelerate your learning journey</p>
-   </div>
-   <div className=' grid  md:grid-cols-2 lg:grid-cols-3 gap-6 my-8'>
+        <p className="text-base sm:text-lg md:text-xl text-gray-600">
+         Everything you need to accelerate your learning journey
+        </p>
+      </div>
+   <div className=' grid  md:grid-cols-2 lg:grid-cols-3 gap-6'>
     {
         features.map((feature,idx)=>
         <div className='border border-gray-200 hover:border-purple-400 shadow-md p-6 rounded-2xl' key={idx}>
             <h1 className=''>{feature.icon}</h1>
-            <h1 className='text-2xl font-semibold my-2'>{feature.heading}</h1>
-            <h1 className='font-semibold opacity-80 my-2'>{feature.subheading}</h1>
+            <h1 className='text-lg sm:text-xl font-semibold mb-2 text-gray-800'>{feature.heading}</h1>
+            <h1 className='text-sm sm:text-base text-gray-600'>{feature.subheading}</h1>
         </div>)
     }
    </div>
