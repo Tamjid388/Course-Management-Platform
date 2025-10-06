@@ -24,7 +24,7 @@ export default function LoginForm() {
       console.log("Form Data:", data);
       signInMutation.mutate(data,{
            onSuccess: (res) => {
-      console.log("JWT:", res.jwt); 
+   
       localStorage.setItem("token", res.jwt); 
       router.push("/"); 
     },
@@ -79,7 +79,7 @@ export default function LoginForm() {
         </div>
            {/* Submit Button */}
         <button type="submit" className="btn btn-neutral w-full rounded-xl">
-          Sign Up
+          Sign In
         </button>
         <h2 className='text-center text-gray-700'>
          Do not have an account? <Link className='underline' href={'/register'}>Sign Up</Link>

@@ -1,15 +1,17 @@
 import { register } from "@/api/auth/register";
 import { TRegister } from "@/types/auth";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 
 import Swal from "sweetalert2";
 
 export const useRegister = () => {
      const router = useRouter();
+     const queryClient = useQueryClient();
   return useMutation({
     mutationFn: (data: TRegister) => register(data),
     onSuccess: (data) => {
+       queryClient.invalidateQueries({queryKey:["currentUser"]});
       Swal.fire({
         title: " Registration Successful",
 

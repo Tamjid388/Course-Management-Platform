@@ -1,12 +1,33 @@
 
 "use client"
+
+
 import { useCurrentUser } from "@/hooks/useCurrenuser";
+import { useLogout } from "@/hooks/useLogout";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function Navbar() {
-  const {data:user}=useCurrentUser()
-  console.log(user);
+  const {data:user,isPending}=useCurrentUser()
+ 
+
+ const router = useRouter();
+const {mutate:logout }= useLogout();
+  const handleLogout = () => {
+   // remove token
+    router.push("/login"); // redirect to login page
+  };
+  const menu=<>
+   <li>
+            <Link href={"/"}>Home</Link>
+          </li>
+          
+          <li>
+            <Link href={"/courses"}>Courses</Link>
+          </li>
+  
+  </>
   return (
     <div className="navbar bg-white text-black shadow-sm fixed">
       <div className="navbar-start">
@@ -32,34 +53,40 @@ export default function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-
-            <li>
-              <a>Item 3</a>
-            </li>
+         {
+          menu
+         }
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">LearnHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link href={"/login"}>Login</Link>
-          </li>
-          <li>
-            <Link href={"/register"}>Register</Link>
-          </li>
-
-          
+  
+      {
+        menu
+      }    
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+         {/* User logged in */}
+        {!isPending && user && (
+          <div className="flex items-center gap-3">
+            <span className="font-medium">{user.username}</span>
+            <button 
+            onClick={() => logout()}
+            className="btn btn-outline btn-sm">Logout</button>
+          </div>
+        )}
+           {/*  Not Logged-in */}
+        {!user && (
+          <div className="flex items-center gap-2">
+            <Link href="/login" className="btn btn-neutral btn-sm">
+               Get Started
+            </Link>
+        
+          </div>
+        )}
       </div>
     </div>
   );

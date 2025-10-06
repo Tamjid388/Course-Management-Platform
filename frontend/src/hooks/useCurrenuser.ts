@@ -8,8 +8,8 @@ export const useCurrentUser = () => {
     {
     queryKey: ["currentUser"],
     queryFn: CurrentUser,
-     staleTime: 5 * 60 * 1000, 
-    refetchOnWindowFocus: false,
+    //  staleTime: 5 * 60 * 1000, 
+    // refetchOnWindowFocus: false,
 }
 
 );
